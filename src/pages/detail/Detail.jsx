@@ -8,11 +8,11 @@ import Footer from '../../components/footer/Footer';
 import CartList from './CartList'
 import VideoList from './VideoList'
 import MovieList from '../../components/movie-list/MovieList'
-// import Context from '../../store/Context'
+
 const Detail = () => {
     const {category, id} = useParams();
     const [item, setItem] = useState(null);
-    // const {theme} = useContext(Context)
+
 
     useEffect(()=>{
         const getDetail = async() => {

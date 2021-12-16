@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useStore, action } from "../../store";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import MovieCard from "../movie-card/MovieCard";
 import PageHeader from "../page-header/PageHeader";
-import { category as cate } from "../../api/tmdbApi";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import { FaPlay } from "react-icons/fa";
@@ -13,27 +11,17 @@ import apiConfig from "../../api/apiConfig";
 import '../movie-card/movie-card.scss'
 import '../movie-grid/movie-grid.scss'
 import './watch-list.scss'
-const WatchList = (props) => {
-  // const item = props.item;
-  // const link = "/" + category[props.category] + "/" + item.id;
+const WatchList = () => {
   const [state, dispatch] = useStore();
   const { watchlist } = state;
   const [toggleWatchList, setToggleWatchList] = useState(true);
 
-  // const handleAdd = (movie) => {
-  //   dispatch(action.addMovieWatchList(movie));
-  //   setToggleWatchList(!toggleWatchList);
-  // };
 
   const handleDelete = (id) => {
     dispatch(action.removeMovieWatchList(id));
     setToggleWatchList(!toggleWatchList);
   };
 
-
-  // let storeMovie = watchlist.find((movie) => movie.id === item.id);
-
-  // const watchlistDisable = storeMovie ? true : false;
 
   const getClassRate = (vote) => {
     if (vote >= 8) {
@@ -56,8 +44,7 @@ const WatchList = (props) => {
           {watchlist.length > 0 ? (
             <div className="movie-grid">
             {watchlist.map((movie, index) => {
-              // const {backdrop_path} = movie;
-              
+
               const bg = apiConfig.w500Image(movie.poster_path || movie.backdrop_path);
               console.log(bg)
               

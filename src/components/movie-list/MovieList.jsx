@@ -5,9 +5,7 @@ import './movie-list.scss'
 
 import { SwiperSlide, Swiper } from 'swiper/react'
 import tmdbApi, { category } from '../../api/tmdbApi'
-import apiConfig from '../../api/apiConfig'
-import { Link } from 'react-router-dom'
-import Button from '../button/Button'
+
 import MovieCard from '../movie-card/MovieCard'
 
 
