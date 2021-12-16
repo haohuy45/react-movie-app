@@ -8,7 +8,7 @@ const Button = styled.div`
    position: fixed; 
    width: 100%;
    left: 50%;
-   bottom: 40px;
+   bottom: 60px;
    height: 20px;
    font-size: 3rem;
    z-index: 1;
