@@ -1,0 +1,14 @@
+@use '../../scss/' as *;
+
+.casts__item__img{
+    height: 200px;
+    position: relative;
+    box-shadow: $box-shadow;
+}
+
+.casts__item_name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // background-color: $black;
+}
